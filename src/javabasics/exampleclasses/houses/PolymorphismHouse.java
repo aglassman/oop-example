@@ -1,4 +1,6 @@
-package javabasics;
+package javabasics.exampleclasses.houses;
+
+
 
 /*
  * PolymorphismHouse extends House.  This is how Java does Inheritence.

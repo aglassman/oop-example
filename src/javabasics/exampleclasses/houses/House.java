@@ -1,4 +1,4 @@
-package javabasics;
+package javabasics.exampleclasses.houses;
 
 public class House {
 	//Check out the scope of these attributes.

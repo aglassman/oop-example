@@ -1,12 +1,28 @@
-package javabasics;
+package javabasics.encapsulation;
 
-public class HouseBuilder {
+import javabasics.exampleclasses.houses.House;
+import javabasics.exampleclasses.houses.PolymorphismHouse;
+
+public class EncapsulationExamples {
+	/*
+	 * static main methods, with an array of string arguments, are the standard way of starting a java
+	 * class.
+	 */
+	public static void main(String args[])
+	{
+		EncapsulationExamples encapsulationExamples = new EncapsulationExamples();
+		//Change the example method to test out each one.
+		encapsulationExamples.instanceExample();
+	}
+	
 	private void instanceExample()
 	{
 		/*
 		 * House is a class which describes a House's methods and attributes.
 		 * andysHouse and franksHouse are java Objects, which are instances 
-		 * of the House class.
+		 * of the House class.  The implementation of owner and color are
+		 * not encapsulated by the House class.  The controlling code has to
+		 * worry about making sure owner and color are valid entries.
 		 */
 		House house1 = new House();
 		house1.owner = "Andy";
@@ -20,12 +36,14 @@ public class HouseBuilder {
 		System.out.println(house2.owner + "'s house is colored " + house2.color);
 	}
 	
-	private void methodExample()
+	private void encapsulationExample()
 	{
 		/*
 		 * You are setting how many doors your house has, then asking the object
 		 * to count how many doors there are.  By default, there are 2 doors on a
-		 * house.
+		 * house.  The implementation of countDoors is encapsulated by the House
+		 * class.  We are not worried about how House calcuates how many doors it 
+		 * has, which frees the controlling code to worry about other things.
 		 */
 		
 		House myHouse = new House();
@@ -42,31 +60,5 @@ public class HouseBuilder {
 		 */
 		House mySpecificHouse = new House(5,5);
 		System.out.println("My specificly constructed house has " + mySpecificHouse.countDoors() + " doors.");
-	}
-	
-	private void polymorphismExample()
-	{
-		/*
-		 * PolymorphismHouse inherits functionality from House by using the extends
-		 * keyword.  It then uses Polymorphism to change the behavior of the countDoors
-		 * method.
-		 */
-		PolymorphismHouse polyHouse = new PolymorphismHouse(5,5);
-		System.out.println("My polyHouse has " + polyHouse.countDoors() + " doors.(method override, excludes back doors.)");
-		System.out.println("My polyHouse has " + polyHouse.countAllDoors() + " doors.(calling overridden method from House, all doors counted");
-		System.out.println("My polyHouse has " + polyHouse.countDoors(2) + " doors.(method overload, all doors counted + 2)");
-		
-	}
-	
-	
-	/*
-	 * static main methods, with an array of string arguments, are the standard way of starting a java
-	 * class.
-	 */
-	public static void main(String args[])
-	{
-		HouseBuilder houseBuilder = new HouseBuilder();
-		//Change the example method to test out each one.
-		houseBuilder.polymorphismExample();
 	}
 }
