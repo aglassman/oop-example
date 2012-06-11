@@ -2,7 +2,7 @@ package javabasics.polymorphism;
 
 import javabasics.exampleclasses.houses.PolymorphismHouse;
 
-public class HousePolymorphismExamples {
+public class PolymorphismExamples {
 	public static void main(String args[])
 	{
 

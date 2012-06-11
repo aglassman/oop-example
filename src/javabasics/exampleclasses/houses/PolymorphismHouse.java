@@ -10,7 +10,7 @@ package javabasics.exampleclasses.houses;
 public class PolymorphismHouse extends House{
 	
 	/*
-	 * note I don't need to specify any attributes!  They were inherited from House.
+	 * Note there is no need to specify any attributes! They were inherited from House.
 	 * public attributes and methods WILL be available to this code.
 	 * private attributes and methods WILL NOT be available to this code.
 	 * protected attributes and methods WILL be available to this code.
@@ -30,13 +30,13 @@ public class PolymorphismHouse extends House{
 	@Override
 	public int countDoors()
 	{
-		//note that I can't call the calculateNumberOfDoors() from here because it is private scope.
-		//I can call calculateNumberOfFrontDoors() since it is protected scope.
+		//Note that the code can't call the calculateNumberOfDoors() from here because it is private scope.
+		//The code CAN call calculateNumberOfFrontDoors() since it is protected scope.
 		return calculateNumberOfFrontDoors();
 	}
 	
 	/*
-	 * We can still give the PolymorphismHouse the ability to access the overridden 
+	 * The PolymorphismHouse class still has the ability to access the overridden 
 	 * method by using the super keyword.
 	 */
 	public int countAllDoors()
@@ -45,7 +45,8 @@ public class PolymorphismHouse extends House{
 	}
 	
 	/*
-	 * We can use the countDoors method name again if we specify different parameters.
+	 * Methods can share the same name. For example, the countDoors method can be used 
+	 * again if we specify different parameters.
 	 * This type of Polymorphism is known as method overloading.  There can be any number
 	 * of countDoors methods as long as they have different method parameters.
 	 */

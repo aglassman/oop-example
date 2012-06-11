@@ -16,7 +16,7 @@ public class AbstractionExamples {
 	}
 
 	private void example1() {
-		//Let's make a bunch of containers
+		//Create a bunch of containers
 		JellyJar container1 = new JellyJar();
 		JellyJar container2 = new JellyJar();
 		GarbageCan container3 = new GarbageCan();
@@ -28,12 +28,12 @@ public class AbstractionExamples {
 		GarbageCan container9 = new GarbageCan();
 		
 		/*
-		 * These containers should be packed up!  Let's use an implementation of our
+		 * These containers should be packed up!  The code will use an implementation of the
 		 * ContainerPack class.
 		 */
 		ContainerPack myContainerPack = new JellyOnlyContainer();
 		
-		//Now add the containers to the pack
+		//Now the containers are added to the pack
 		myContainerPack.addContainer(container1);
 		myContainerPack.addContainer(container2);
 		myContainerPack.addContainer(container3);
@@ -44,7 +44,7 @@ public class AbstractionExamples {
 		myContainerPack.addContainer(container8);
 		myContainerPack.addContainer(container9);
 		
-		//Now check to see what the ContainerPack allowed to be packed.
+		//Check to see what the ContainerPack allowed to be packed.
 		List<Container> contents = myContainerPack.getAllContainersInPack();
 		for(int i = 0; i < contents.size(); i++)
 		{

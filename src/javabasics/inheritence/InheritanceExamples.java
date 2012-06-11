@@ -4,12 +4,12 @@ import javabasics.exampleclasses.containers.Container;
 import javabasics.exampleclasses.containers.JellyJar;
 
 
-public class JarBuilder {
+public class InheritanceExamples {
 	
 	public static void main(String args[])
 	{
-		JarBuilder jarBuilder = new JarBuilder();
-		jarBuilder.testInheritence1();
+		InheritanceExamples inheritanceExamples = new InheritanceExamples();
+		inheritanceExamples.testInheritence1();
 	}
 
 	private void testInheritence1() {

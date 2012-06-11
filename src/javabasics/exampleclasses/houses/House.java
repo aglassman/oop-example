@@ -45,8 +45,8 @@ public class House {
 	}
 	
 	/*
-	 * countDoors() is an example of encapsulation.  We leave the calculation of 
-	 * total doors up to this method.  The code calling the method has no idea
+	 * countDoors() is an example of encapsulation. The calculation of 
+	 * total doors is left up to this method.  The code calling the method has no idea
 	 * how the number of doors is actually calculated.
 	 */
 	public int countDoors()
@@ -65,10 +65,11 @@ public class House {
 		return frontDoors;
 	}
 
-	/*These are 'setter' methods.  We don't give the calling code the ability to
-	* change these values directly.  This adds security to the object.  Like below, we are
-	* limiting the number of front doors to > =.  This gives us more control over our
-	* objects.  This is also an example of Encapsulation.
+	/*These are 'setter' methods. The calling code does not have the ability to
+	* change these values directly.  This adds security to the object.  This allows the code below
+	* to limit the number of front doors to > =.  This gives the objects more control over 
+	* their own functionality without worrying about external modifications.
+	* This is also an example of Encapsulation.
 	*/
 	public void setNumberOfFrontDoors(int newNumberOfDoors) {
 		if(newNumberOfDoors <= 0)

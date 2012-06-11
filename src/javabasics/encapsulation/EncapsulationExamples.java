@@ -42,7 +42,7 @@ public class EncapsulationExamples {
 		 * You are setting how many doors your house has, then asking the object
 		 * to count how many doors there are.  By default, there are 2 doors on a
 		 * house.  The implementation of countDoors is encapsulated by the House
-		 * class.  We are not worried about how House calcuates how many doors it 
+		 * class.  We are not worried about how House calculates how many doors it 
 		 * has, which frees the controlling code to worry about other things.
 		 */
 		
@@ -55,7 +55,7 @@ public class EncapsulationExamples {
 		System.out.println("My house now has " + myHouse.countDoors() + " doors.");
 		
 		/*
-		 * by passing parameters into the constructor, we can instantiate a more specific
+		 * By passing parameters into the constructor, we can instantiate a more specific
 		 * house.
 		 */
 		House mySpecificHouse = new House(5,5);
