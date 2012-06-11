@@ -6,14 +6,16 @@ public class HouseBuilder {
 		//House is a class which describes a House's methods and attributes.
 		//  andysHouse and franksHouse are java Objects, which are instances 
 		//	of the House class.
-		House andysHouse = new House();
-		andysHouse.color = "blue";
+		House house1 = new House();
+		house1.owner = "Andy";
+		house1.color = "blue";
 		
-		House franksHouse = new House();
-		franksHouse.color = "yellow";
+		House house2 = new House();
+		house2.owner = "Frank";
+		house2.color = "yellow";
 		
-		System.out.println("Andy's house is colored " + andysHouse.color);
-		System.out.println("Frank's house is colored " + franksHouse.color);
+		System.out.println(house1.owner + "'s house is colored " + house1.color);
+		System.out.println(house2.owner + "'s house is colored " + house2.color);
 	}
 	
 	private void methodExample()

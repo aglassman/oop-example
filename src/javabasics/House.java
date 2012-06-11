@@ -1,17 +1,29 @@
 package javabasics;
 
 public class House {
-	//Check out the scoope of these attributes.
+	//Check out the scope of these attributes.
 	
 	//color is public, so any calling code can change the color!
-	public String color;
+	public String color = "white";
+	public String owner;
 	
-	// Door variables are private, so they can only be changed by
-	// methods of the House class.
+	/*
+	 * Door variables are private, so they can only be changed by
+	 * methods of the House class.
+	 */
 	private int frontDoors;
 	private int backDoors;
 	
-	//default constructor
+	/*
+	 * Constructors create a new instance of the class.  All non-primitive attributes start
+	 * out as null unless specified in the attribute declaration above.  Example:
+	 * color will always be white unless someone else changes it. owner will be null untill
+	 * someone sets the owner's name.  frontDoors and backDoors are primitives, and will be 
+	 * zero when created, but are set within the constructor in this case.  
+	 */
+	
+	
+	//default constructor, this means it has no parameters.
 	public House()
 	{
 		//specify how many doors a house has by default.
@@ -22,10 +34,12 @@ public class House {
 	//a more specific constructor
 	public House(int frontDoors, int backDoors)
 	{
-		//the keyword this lets java know we are talking about the
-		//	object's attributes, not the parameters passed in to the
-		//	constructor.  
-		//	frontDoors = frontDoors would be ambiguous.
+		/*
+		 * The keyword this lets java know we are talking about the
+		 * object's attributes, not the parameters passed in to the
+		 * constructor.  
+		 * frontDoors = frontDoors would be ambiguous.
+		 */
 		this.frontDoors = frontDoors;
 		this.backDoors = backDoors;
 	}
