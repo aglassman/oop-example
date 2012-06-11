@@ -7,8 +7,15 @@ package javabasics;
  */
 public class PolymorphismHouse extends House{
 	
-	//note I don't need to specify any attributes!  They were inherited from House.
+	/*
+	 * note I don't need to specify any attributes!  They were inherited from House.
+	 * public attributes and methods WILL be available to this code.
+	 * private attributes and methods WILL NOT be available to this code.
+	 * protected attributes and methods WILL be available to this code.
+	 * package-private attributes and methods WILL be available to this code.
+	 */
 	
+	//Constructors are not inherited, but can be called.
 	public PolymorphismHouse(int frontDoors, int backDoors) {
 		super(frontDoors,backDoors);
 	}
@@ -40,8 +47,8 @@ public class PolymorphismHouse extends House{
 	 * This type of Polymorphism is known as method overloading.  There can be any number
 	 * of countDoors methods as long as they have different method parameters.
 	 */
-	public int countDoors(int i)
+	public int countDoors(int additionalDoors)
 	{
-		return super.countDoors() + 1;
+		return super.countDoors() + additionalDoors;
 	}
 }
