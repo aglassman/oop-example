@@ -39,4 +39,9 @@ public class JellyJar implements Container, Edible{
 		}
 	}
 
+	@Override
+	public String getContents() {
+		return "Jelly";
+	}
+
 }
