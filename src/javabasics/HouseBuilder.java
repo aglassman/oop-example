@@ -3,9 +3,11 @@ package javabasics;
 public class HouseBuilder {
 	private void instanceExample()
 	{
-		//House is a class which describes a House's methods and attributes.
-		//  andysHouse and franksHouse are java Objects, which are instances 
-		//	of the House class.
+		/*
+		 * House is a class which describes a House's methods and attributes.
+		 * andysHouse and franksHouse are java Objects, which are instances 
+		 * of the House class.
+		 */
 		House house1 = new House();
 		house1.owner = "Andy";
 		house1.color = "blue";
